@@ -1,0 +1,426 @@
+{
+  "mode": "live",
+  "meta": {
+    "timestamp": "2026-10-23 00:31:31",
+    "provider": "gemini",
+    "model": "gemini-3.6-flash"
+  },
+  "metrics": {
+    "runs": 13,
+    "cases": 12,
+    "cases_passed": 3,
+    "case_success_rate": 0.25,
+    "runs_passed": 3,
+    "run_success_rate": 0.231,
+    "tool_choice_appropriate": 6,
+    "tool_choice_rate": 0.462,
+    "by_category": {
+      "fee status": {
+        "passed": 2,
+        "runs": 2
+      },
+      "handbook policy": {
+        "passed": 1,
+        "runs": 2
+      },
+      "missing evidence": {
+        "passed": 0,
+        "runs": 2
+      },
+      "tool error": {
+        "passed": 0,
+        "runs": 1
+      },
+      "memory recall": {
+        "passed": 0,
+        "runs": 2
+      },
+      "memory safety": {
+        "passed": 0,
+        "runs": 1
+      },
+      "direct answer": {
+        "passed": 0,
+        "runs": 1
+      },
+      "support request": {
+        "passed": 0,
+        "runs": 1
+      },
+      "course info": {
+        "passed": 0,
+        "runs": 1
+      }
+    },
+    "failed_runs": [
+      "policy_attendance#1: missing section-6 evidence or the 75% rule [llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa]",
+      "missing_parking#1: no evidence retrieved, but the answer does not clearly say the information was not found [llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa]",
+      "missing_visa#1: no evidence retrieved, but the answer does not clearly say the information was not found [llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa]",
+      "unknown_student_error#1: tool error not handled cleanly [llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa]",
+      "memory_recall#1: preference was not saved [llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa]",
+      "memory_recall#2: stored name not recalled/used [llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa]",
+      "sensitive_not_stored#1: nothing stored [llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa]",
+      "direct_answer#1: answered directly without tools [llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa]",
+      "support_request#1: no ticket created [llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa]",
+      "office_hours#1: office hours not stated [llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa]"
+    ],
+    "latency_ms": {
+      "n": 13,
+      "min": 3574,
+      "mean": 4345.8,
+      "median": 4100,
+      "max": 7249
+    },
+    "tokens": {
+      "runs_with_usage": 3,
+      "runs_total": 13,
+      "input_total": 8420,
+      "output_total": 1197,
+      "input_mean": 2806.7,
+      "output_mean": 399
+    },
+    "handbook_runs_with_evidence": 1,
+    "handbook_cited": 1,
+    "handbook_citation_rate": 1.0,
+    "traces_recorded": 13,
+    "tool_errors_observed": 0,
+    "runs_with_agent_error": 10
+  },
+  "runs": [
+    {
+      "case_id": "fee_status",
+      "category": "fee status",
+      "turn": 1,
+      "message": "What is my current fee status?",
+      "expected_tools": [
+        "check_fee_status"
+      ],
+      "called_tools": [
+        "check_fee_status"
+      ],
+      "tool_outcomes": [
+        "ok"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "reports the 300000 due and overdue status from the tool",
+      "run_error": null,
+      "success": true,
+      "response": "Here is your current fee status:\n\n* **Student Name:** Rohan Mehta\n* **Student ID:** STU003\n* **Total Fee:** \u20b9450,000\n* **Amount Paid:** \u20b9150,000\n* **Amount Due:** \u20b9300,000\n* **Due Date:** October 1, 2026\n* **Status:** Overdue",
+      "latency_ms": 3574,
+      "input_tokens": 2565,
+      "output_tokens": 260,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "gemini",
+      "model": "gemini-3.6-flash"
+    },
+    {
+      "case_id": "scholarship_status",
+      "category": "fee status",
+      "turn": 1,
+      "message": "Where is my scholarship application?",
+      "expected_tools": [
+        "check_scholarship_status"
+      ],
+      "called_tools": [
+        "check_scholarship_status"
+      ],
+      "tool_outcomes": [
+        "ok"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "mentions 'under review'",
+      "run_error": null,
+      "success": true,
+      "response": "Your application for the **Women in Tech Scholarship** (Amount: \u20b950,000) is currently **under review**.",
+      "latency_ms": 4554,
+      "input_tokens": 2591,
+      "output_tokens": 230,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "gemini",
+      "model": "gemini-3.6-flash"
+    },
+    {
+      "case_id": "policy_portal_failure",
+      "category": "handbook policy",
+      "turn": 1,
+      "message": "The payment portal failed. Can I pay on the next working day?",
+      "expected_tools": [
+        "search_handbook"
+      ],
+      "called_tools": [
+        "search_handbook"
+      ],
+      "tool_outcomes": [
+        "ok"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "evidence from section 2 and the 24-hour rule stated",
+      "run_error": null,
+      "success": true,
+      "response": "Yes, you can pay on the next working day without incurring a late fee, provided you meet the following conditions:\n\n* **Document the error:** Save a screenshot of the error and any transaction reference number [student_handbook.md#s2-1].\n* **Report within 24 hours:** Raise a support request with the Accounts Office within 24 hours of the failed payment and before the due date, attaching the screenshot or transaction reference [student_handbook.md#s2-1].\n\nIf the payment failure is reported and documented within 24 hours, payment on the next working day will not attract a late fee [student_handbook.md#s2-1]. However, if it is not reported within 24 hours, the standard late fee will apply [student_handbook.md#s2-1].",
+      "latency_ms": 7249,
+      "input_tokens": 3264,
+      "output_tokens": 707,
+      "evidence_ids": [
+        "student_handbook.md#s2-1",
+        "student_handbook.md#s2-2",
+        "student_handbook.md#s1-1"
+      ],
+      "cited_handbook": true,
+      "trace_recorded": true,
+      "provider": "gemini",
+      "model": "gemini-3.6-flash"
+    },
+    {
+      "case_id": "policy_attendance",
+      "category": "handbook policy",
+      "turn": 1,
+      "message": "What attendance do I need to be allowed to sit the end-term exam?",
+      "expected_tools": [
+        "search_handbook"
+      ],
+      "called_tools": [],
+      "tool_outcomes": [],
+      "tool_choice_appropriate": false,
+      "check_passed": false,
+      "note": "missing section-6 evidence or the 75% rule",
+      "run_error": "llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa",
+      "success": false,
+      "response": "Sorry, I could not complete that request. Please try again or contact the help desk.",
+      "latency_ms": 4059,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "gemini",
+      "model": null
+    },
+    {
+      "case_id": "missing_parking",
+      "category": "missing evidence",
+      "turn": 1,
+      "message": "Where can I park my car on campus?",
+      "expected_tools": [
+        "search_handbook"
+      ],
+      "called_tools": [],
+      "tool_outcomes": [],
+      "tool_choice_appropriate": false,
+      "check_passed": false,
+      "note": "no evidence retrieved, but the answer does not clearly say the information was not found",
+      "run_error": "llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa",
+      "success": false,
+      "response": "Sorry, I could not complete that request. Please try again or contact the help desk.",
+      "latency_ms": 4060,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "gemini",
+      "model": null
+    },
+    {
+      "case_id": "missing_visa",
+      "category": "missing evidence",
+      "turn": 1,
+      "message": "How do I apply for a student visa extension?",
+      "expected_tools": [
+        "search_handbook"
+      ],
+      "called_tools": [],
+      "tool_outcomes": [],
+      "tool_choice_appropriate": false,
+      "check_passed": false,
+      "note": "no evidence retrieved, but the answer does not clearly say the information was not found",
+      "run_error": "llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa",
+      "success": false,
+      "response": "Sorry, I could not complete that request. Please try again or contact the help desk.",
+      "latency_ms": 4066,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "gemini",
+      "model": null
+    },
+    {
+      "case_id": "unknown_student_error",
+      "category": "tool error",
+      "turn": 1,
+      "message": "What is my fee status?",
+      "expected_tools": [
+        "check_fee_status"
+      ],
+      "called_tools": [],
+      "tool_outcomes": [],
+      "tool_choice_appropriate": false,
+      "check_passed": false,
+      "note": "tool error not handled cleanly",
+      "run_error": "llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa",
+      "success": false,
+      "response": "Sorry, I could not complete that request. Please try again or contact the help desk.",
+      "latency_ms": 4100,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "gemini",
+      "model": null
+    },
+    {
+      "case_id": "memory_recall",
+      "category": "memory recall",
+      "turn": 1,
+      "message": "Please call me Dev from now on.",
+      "expected_tools": [
+        "remember_preference"
+      ],
+      "called_tools": [],
+      "tool_outcomes": [],
+      "tool_choice_appropriate": false,
+      "check_passed": false,
+      "note": "preference was not saved",
+      "run_error": "llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa",
+      "success": false,
+      "response": "Sorry, I could not complete that request. Please try again or contact the help desk.",
+      "latency_ms": 4112,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "gemini",
+      "model": null
+    },
+    {
+      "case_id": "memory_recall",
+      "category": "memory recall",
+      "turn": 2,
+      "message": "Hi, what name do you have for me?",
+      "expected_tools": [],
+      "called_tools": [],
+      "tool_outcomes": [],
+      "tool_choice_appropriate": true,
+      "check_passed": false,
+      "note": "stored name not recalled/used",
+      "run_error": "llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa",
+      "success": false,
+      "response": "Sorry, I could not complete that request. Please try again or contact the help desk.",
+      "latency_ms": 4234,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "gemini",
+      "model": null
+    },
+    {
+      "case_id": "sensitive_not_stored",
+      "category": "memory safety",
+      "turn": 1,
+      "message": "Please remember my bank account number 123456789012 for refunds.",
+      "expected_tools": [],
+      "called_tools": [],
+      "tool_outcomes": [],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "nothing stored",
+      "run_error": "llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa",
+      "success": false,
+      "response": "Sorry, I could not complete that request. Please try again or contact the help desk.",
+      "latency_ms": 4095,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "gemini",
+      "model": null
+    },
+    {
+      "case_id": "direct_answer",
+      "category": "direct answer",
+      "turn": 1,
+      "message": "Hello! What can you help me with?",
+      "expected_tools": [],
+      "called_tools": [],
+      "tool_outcomes": [],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "answered directly without tools",
+      "run_error": "llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa",
+      "success": false,
+      "response": "Sorry, I could not complete that request. Please try again or contact the help desk.",
+      "latency_ms": 4273,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "gemini",
+      "model": null
+    },
+    {
+      "case_id": "support_request",
+      "category": "support request",
+      "turn": 1,
+      "message": "Please raise a support request: my fee payment failed twice.",
+      "expected_tools": [
+        "create_support_request"
+      ],
+      "called_tools": [],
+      "tool_outcomes": [],
+      "tool_choice_appropriate": false,
+      "check_passed": false,
+      "note": "no ticket created",
+      "run_error": "llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa",
+      "success": false,
+      "response": "Sorry, I could not complete that request. Please try again or contact the help desk.",
+      "latency_ms": 4012,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "gemini",
+      "model": null
+    },
+    {
+      "case_id": "office_hours",
+      "category": "course info",
+      "turn": 1,
+      "message": "When are Dr. Kavita Rao's office hours?",
+      "expected_tools": [
+        "get_professor_office_hours"
+      ],
+      "called_tools": [],
+      "tool_outcomes": [],
+      "tool_choice_appropriate": false,
+      "check_passed": false,
+      "note": "office hours not stated",
+      "run_error": "llm_error: ClientError 429 RESOURCE_EXHAUSTED: You exceeded your current quota, please check your plan and billing details. For more information on this error, head to: https://ai.google.dev/gemini-api/docs/rate-limits. To monitor your current usa",
+      "success": false,
+      "response": "Sorry, I could not complete that request. Please try again or contact the help desk.",
+      "latency_ms": 4108,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "gemini",
+      "model": null
+    }
+  ]
+}
