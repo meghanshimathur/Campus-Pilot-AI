@@ -1,0 +1,8 @@
+[
+  {"course_id": "BDA101", "name": "Python for Data Analytics", "department": "Analytics", "credits": 3, "term": "Term 1", "professor_id": "PROF01", "schedule": "Mon/Wed 10:00-11:30", "keywords": ["python", "pandas", "programming"]},
+  {"course_id": "BDA201", "name": "Big Data Processing with Spark", "department": "Analytics", "credits": 4, "term": "Term 2", "professor_id": "PROF02", "schedule": "Tue/Thu 14:00-15:30", "keywords": ["spark", "hadoop", "distributed"]},
+  {"course_id": "AIDS110", "name": "Machine Learning Foundations", "department": "AI", "credits": 4, "term": "Term 1", "professor_id": "PROF03", "schedule": "Mon/Thu 11:45-13:15", "keywords": ["ml", "regression", "classification"]},
+  {"course_id": "AIDS220", "name": "Agentic AI Engineering", "department": "AI", "credits": 3, "term": "Term 2", "professor_id": "PROF03", "schedule": "Wed/Fri 15:45-17:15", "keywords": ["agents", "llm", "tool calling"]},
+  {"course_id": "MGT130", "name": "Business Communication", "department": "Management", "credits": 2, "term": "Term 1", "professor_id": "PROF04", "schedule": "Fri 09:00-11:00", "keywords": ["writing", "presentation"]},
+  {"course_id": "STA140", "name": "Statistics for Decision Making", "department": "Analytics", "credits": 3, "term": "Term 1", "professor_id": "PROF02", "schedule": "Tue/Thu 09:00-10:30", "keywords": ["probability", "hypothesis", "statistics"]}
+]

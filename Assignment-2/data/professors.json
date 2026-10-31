@@ -1,0 +1,10 @@
+[
+  {"professor_id": "PROF01", "name": "Dr. Kavita Rao", "department": "Analytics", "office_room": "F-204",
+   "office_hours": [{"day": "Mon", "start": "14:00", "end": "16:00"}, {"day": "Wed", "start": "14:00", "end": "15:00"}]},
+  {"professor_id": "PROF02", "name": "Prof. Sameer Joshi", "department": "Analytics", "office_room": "F-210",
+   "office_hours": [{"day": "Tue", "start": "11:00", "end": "13:00"}, {"day": "Thu", "start": "16:00", "end": "17:00"}]},
+  {"professor_id": "PROF03", "name": "Dr. Neha Kulkarni", "department": "AI", "office_room": "F-305",
+   "office_hours": [{"day": "Wed", "start": "10:00", "end": "12:00"}, {"day": "Fri", "start": "13:00", "end": "14:30"}]},
+  {"professor_id": "PROF04", "name": "Prof. Arjun Menon", "department": "Management", "office_room": "G-102",
+   "office_hours": [{"day": "Fri", "start": "11:30", "end": "13:00"}]}
+]
