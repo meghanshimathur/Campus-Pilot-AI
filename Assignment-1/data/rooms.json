@@ -1,0 +1,9 @@
+[
+  {"room_id": "A-101", "name": "Lecture Hall A-101", "capacity": 80, "open": "08:00", "close": "20:00",
+   "bookings": [{"day": "Mon", "start": "10:00", "end": "11:30", "purpose": "BDA101 lecture"}, {"day": "Wed", "start": "10:00", "end": "11:30", "purpose": "BDA101 lecture"}]},
+  {"room_id": "B-203", "name": "Seminar Room B-203", "capacity": 30, "open": "08:00", "close": "20:00",
+   "bookings": [{"day": "Tue", "start": "14:00", "end": "15:30", "purpose": "BDA201 lecture"}, {"day": "Thu", "start": "14:00", "end": "15:30", "purpose": "BDA201 lecture"}]},
+  {"room_id": "LAB-1", "name": "Computer Lab 1", "capacity": 40, "open": "08:00", "close": "20:00",
+   "bookings": [{"day": "Mon", "start": "11:45", "end": "13:15", "purpose": "AIDS110 lab"}, {"day": "Fri", "start": "15:45", "end": "17:15", "purpose": "AIDS220 lab"}]},
+  {"room_id": "STUDY-2", "name": "Group Study Room 2", "capacity": 8, "open": "08:00", "close": "20:00", "bookings": []}
+]

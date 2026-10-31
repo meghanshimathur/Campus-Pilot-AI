@@ -1,0 +1,7 @@
+[
+  {"event_id": "EVT01", "title": "Data Science Career Fair", "category": "career", "date": "2026-11-05", "time": "10:00", "location": "Main Auditorium"},
+  {"event_id": "EVT02", "title": "Agentic AI Guest Lecture", "category": "academic", "date": "2026-11-12", "time": "16:00", "location": "A-101"},
+  {"event_id": "EVT03", "title": "Annual Cultural Night", "category": "cultural", "date": "2026-11-20", "time": "18:30", "location": "Open Air Theatre"},
+  {"event_id": "EVT04", "title": "Hackathon Kick-off", "category": "technical", "date": "2026-12-02", "time": "09:30", "location": "Computer Lab 1"},
+  {"event_id": "EVT05", "title": "Inter-Batch Sports Day", "category": "sports", "date": "2026-10-15", "time": "08:00", "location": "Campus Grounds"}
+]

@@ -1,0 +1,604 @@
+{
+ "_note": "Fictional labelled queries for the fictional handbook. 'sections' = acceptable handbook sections for in-scope queries. Provenance matters: design = looked at while designing the hybrid rule; held_out_1..3 were each consumed (informed one rule decision); held_out_4 was scored once, after the rules were frozen.",
+ "design": {
+  "in_scope": [
+   {
+    "query": "The payment portal failed. Can I pay on the next working day?",
+    "sections": [
+     "2."
+    ]
+   },
+   {
+    "query": "What is the minimum attendance for exams?",
+    "sections": [
+     "5.",
+     "6."
+    ]
+   },
+   {
+    "query": "How many books can I borrow from the library?",
+    "sections": [
+     "7."
+    ]
+   },
+   {
+    "query": "What time does the hostel gate close?",
+    "sections": [
+     "8."
+    ]
+   },
+   {
+    "query": "How do I appeal a grievance decision?",
+    "sections": [
+     "9."
+    ]
+   },
+   {
+    "query": "re-evaluation of answer script",
+    "sections": [
+     "5."
+    ]
+   },
+   {
+    "query": "How do I apply for re-evaluation of my answer script?",
+    "sections": [
+     "5."
+    ]
+   },
+   {
+    "query": "extension of fee payment deadline",
+    "sections": [
+     "1.",
+     "2."
+    ]
+   },
+   {
+    "query": "late fee",
+    "sections": [
+     "1."
+    ]
+   },
+   {
+    "query": "what happens if I pay my fees late",
+    "sections": [
+     "1.",
+     "2."
+    ]
+   },
+   {
+    "query": "refund if I withdraw from the programme",
+    "sections": [
+     "3."
+    ]
+   },
+   {
+    "query": "can I get my caution deposit back",
+    "sections": [
+     "8."
+    ]
+   },
+   {
+    "query": "scholarship renewal CGPA",
+    "sections": [
+     "4."
+    ]
+   },
+   {
+    "query": "what CGPA do I need to keep my scholarship",
+    "sections": [
+     "4."
+    ]
+   },
+   {
+    "query": "how do I replace a lost ID card",
+    "sections": [
+     "12."
+    ]
+   },
+   {
+    "query": "make-up exam",
+    "sections": [
+     "5."
+    ]
+   },
+   {
+    "query": "missed my exam because of an emergency",
+    "sections": [
+     "5."
+    ]
+   },
+   {
+    "query": "attendance condonation",
+    "sections": [
+     "6."
+    ]
+   },
+   {
+    "query": "my attendance is 70 percent what can I do",
+    "sections": [
+     "6."
+    ]
+   },
+   {
+    "query": "overdue library fine",
+    "sections": [
+     "7."
+    ]
+   },
+   {
+    "query": "visitors allowed in hostel",
+    "sections": [
+     "8."
+    ]
+   },
+   {
+    "query": "how long does grievance resolution take",
+    "sections": [
+     "9."
+    ]
+   },
+   {
+    "query": "last date to drop a course",
+    "sections": [
+     "10."
+    ]
+   },
+   {
+    "query": "change my elective",
+    "sections": [
+     "10."
+    ]
+   },
+   {
+    "query": "how to get a bonafide certificate",
+    "sections": [
+     "10."
+    ]
+   },
+   {
+    "query": "what if I am caught plagiarising",
+    "sections": [
+     "11."
+    ]
+   },
+   {
+    "query": "can I use AI tools in assessments",
+    "sections": [
+     "11."
+    ]
+   },
+   {
+    "query": "library opening hours on saturday",
+    "sections": [
+     "7."
+    ]
+   },
+   {
+    "query": "bank debited but portal did not credit",
+    "sections": [
+     "2."
+    ]
+   },
+   {
+    "query": "need-based grant documents",
+    "sections": [
+     "4."
+    ]
+   },
+   {
+    "query": "exam hall rules phones",
+    "sections": [
+     "5."
+    ]
+   },
+   {
+    "query": "how to withdraw",
+    "sections": [
+     "3."
+    ]
+   }
+  ],
+  "out_of_scope": [
+   "student visa extension",
+   "visa renewal for international students",
+   "how to apply for a student visa",
+   "student car parking on campus",
+   "parking permit",
+   "airport bus schedule",
+   "campus shuttle timings",
+   "placement salary package",
+   "gym membership",
+   "wifi password",
+   "canteen menu",
+   "medical insurance claim",
+   "internship opportunities",
+   "how do I extend my stay in the country",
+   "what is the capital of France",
+   "tell me a joke",
+   "student discount on public transport",
+   "laptop recommendations for students",
+   "student council elections",
+   "alumni network benefits",
+   "student exchange programme abroad",
+   "how do I change my phone number",
+   "sports facilities timings",
+   "cafeteria fee",
+   "student accommodation off campus"
+  ]
+ },
+ "held_out_1": {
+  "in_scope": [
+   {
+    "query": "How soon must I report a failed online payment?",
+    "sections": [
+     "2."
+    ]
+   },
+   {
+    "query": "What is the fine if I return a book late?",
+    "sections": [
+     "7."
+    ]
+   },
+   {
+    "query": "What is the curfew time in the hostel?",
+    "sections": [
+     "8."
+    ]
+   },
+   {
+    "query": "Who do I contact if I'm unhappy with how my complaint was handled?",
+    "sections": [
+     "9."
+    ]
+   },
+   {
+    "query": "Will I lose my scholarship if my grades drop?",
+    "sections": [
+     "4."
+    ]
+   },
+   {
+    "query": "What documents do I need for a need-based grant?",
+    "sections": [
+     "4."
+    ]
+   },
+   {
+    "query": "How many days after results can I ask for rechecking of my paper?",
+    "sections": [
+     "5."
+    ]
+   },
+   {
+    "query": "Can I bring my smartwatch to the exam?",
+    "sections": [
+     "5."
+    ]
+   },
+   {
+    "query": "What is the penalty for copying in an assignment?",
+    "sections": [
+     "11."
+    ]
+   },
+   {
+    "query": "How long to get a replacement student card?",
+    "sections": [
+     "12."
+    ]
+   },
+   {
+    "query": "Is there a late fee if I pay after the due date?",
+    "sections": [
+     "1."
+    ]
+   },
+   {
+    "query": "Can I swap an elective after classes begin?",
+    "sections": [
+     "10."
+    ]
+   }
+  ],
+  "out_of_scope": [
+   "Where is the nearest ATM?",
+   "How do I get a work permit?",
+   "What is the dress code?",
+   "Is there a swimming pool?",
+   "When is the winter vacation?",
+   "How do I book a guest house for my parents?",
+   "What is the faculty salary?",
+   "How do I apply for an education loan?",
+   "Can I bring my pet to the hostel?",
+   "What is the bus pass fee?",
+   "Does the library offer printing services?",
+   "How do I join the cricket team?"
+  ]
+ },
+ "held_out_2": {
+  "in_scope": [
+   {
+    "query": "Can I contest my marks on a paper after results come out?",
+    "sections": [
+     "5."
+    ]
+   },
+   {
+    "query": "How do I get my money back if I quit the course in the first two weeks?",
+    "sections": [
+     "3."
+    ]
+   },
+   {
+    "query": "What is the late return charge for library books?",
+    "sections": [
+     "7."
+    ]
+   },
+   {
+    "query": "Are mobile phones allowed in the examination hall?",
+    "sections": [
+     "5."
+    ]
+   },
+   {
+    "query": "When do the hostel doors lock at night?",
+    "sections": [
+     "8."
+    ]
+   },
+   {
+    "query": "What happens to a student found copying in an exam?",
+    "sections": [
+     "11."
+    ]
+   },
+   {
+    "query": "What certificate can I get from the programme office and how fast?",
+    "sections": [
+     "10."
+    ]
+   },
+   {
+    "query": "Do I need 75% attendance to write the final exam?",
+    "sections": [
+     "5.",
+     "6."
+    ]
+   },
+   {
+    "query": "How long will the grievance cell take to respond?",
+    "sections": [
+     "9."
+    ]
+   },
+   {
+    "query": "Is the hostel deposit refundable?",
+    "sections": [
+     "3.",
+     "8."
+    ]
+   },
+   {
+    "query": "What is the processing time for approved refunds?",
+    "sections": [
+     "3."
+    ]
+   },
+   {
+    "query": "How often can I renew a library book?",
+    "sections": [
+     "7."
+    ]
+   },
+   {
+    "query": "What happens to my scholarship if my CGPA is below 3?",
+    "sections": [
+     "4."
+    ]
+   },
+   {
+    "query": "How many days do I have to ask about my internal assessment marks?",
+    "sections": [
+     "10."
+    ]
+   }
+  ],
+  "out_of_scope": [
+   "How do I register for the upcoming cultural fest?",
+   "Is there a student discount at the nearby cinema?",
+   "How do I reset my email password?",
+   "What are the visa rules for international students?",
+   "Where can I find a part-time job on campus?",
+   "What is the fee for the MBA programme?",
+   "Can I get a hostel room with an attached bathroom?",
+   "What are the exam dates for next term?",
+   "Does the library have a quiet study zone?",
+   "What courses are offered in the AI department?",
+   "How do I contact the placement office?",
+   "What is the weather like in winter?",
+   "How do I get a parking sticker for my bike?"
+  ]
+ },
+ "held_out_3": {
+  "in_scope": [
+   {
+    "query": "Can I get a refund if I leave in the first week?",
+    "sections": [
+     "3."
+    ]
+   },
+   {
+    "query": "What is the penalty for submitting someone else's work as mine?",
+    "sections": [
+     "11."
+    ]
+   },
+   {
+    "query": "Until what time can I stay in the library on a weekday?",
+    "sections": [
+     "7."
+    ]
+   },
+   {
+    "query": "How do I request a certificate proving I study here?",
+    "sections": [
+     "10."
+    ]
+   },
+   {
+    "query": "What should I do if I lose my identity card?",
+    "sections": [
+     "12."
+    ]
+   },
+   {
+    "query": "Can I skip an exam and take it later if I'm in an emergency?",
+    "sections": [
+     "5."
+    ]
+   },
+   {
+    "query": "Is there a fine for overdue books?",
+    "sections": [
+     "7."
+    ]
+   },
+   {
+    "query": "How do I escalate if my complaint is not resolved?",
+    "sections": [
+     "9."
+    ]
+   },
+   {
+    "query": "Do scholarships get paid out as cash?",
+    "sections": [
+     "4."
+    ]
+   },
+   {
+    "query": "What if my bank was charged but the website showed an error?",
+    "sections": [
+     "2."
+    ]
+   },
+   {
+    "query": "How late can I enter the exam hall?",
+    "sections": [
+     "5."
+    ]
+   },
+   {
+    "query": "What is the visitor policy for hostel residents?",
+    "sections": [
+     "8."
+    ]
+   }
+  ],
+  "out_of_scope": [
+   "What is the syllabus for Machine Learning?",
+   "How can I get a bus pass?",
+   "Who won the cricket match yesterday?",
+   "How do I apply for a passport?",
+   "Where is the nearest hospital?",
+   "Can I pay my fees by cryptocurrency?",
+   "How do I get a scholarship abroad?",
+   "Are there evening classes?",
+   "What is the lunch menu in the hostel mess?",
+   "Can I borrow a laptop from the library?",
+   "Can I take a gap year?",
+   "How do I contact the Vice Chancellor?"
+  ]
+ },
+ "held_out_4": {
+  "in_scope": [
+   {
+    "query": "What is the deadline to withdraw from an elective?",
+    "sections": [
+     "10."
+    ]
+   },
+   {
+    "query": "How long can I keep a book from the library?",
+    "sections": [
+     "7."
+    ]
+   },
+   {
+    "query": "Where do I report harassment?",
+    "sections": [
+     "9."
+    ]
+   },
+   {
+    "query": "What marks do I get if I'm caught cheating?",
+    "sections": [
+     "11."
+    ]
+   },
+   {
+    "query": "Can my scholarship be taken away?",
+    "sections": [
+     "4."
+    ]
+   },
+   {
+    "query": "What's the penalty for paying fees after the due date?",
+    "sections": [
+     "1."
+    ]
+   },
+   {
+    "query": "How many absences are allowed before I can't take the exam?",
+    "sections": [
+     "6."
+    ]
+   },
+   {
+    "query": "What are the working hours of the accounts counter?",
+    "sections": [
+     "1."
+    ]
+   },
+   {
+    "query": "What do I need to carry for the exam?",
+    "sections": [
+     "5."
+    ]
+   },
+   {
+    "query": "Can friends come to my hostel room?",
+    "sections": [
+     "8."
+    ]
+   },
+   {
+    "query": "What if my ID card gets stolen?",
+    "sections": [
+     "12."
+    ]
+   },
+   {
+    "query": "How soon are internal assessment results announced?",
+    "sections": [
+     "10."
+    ]
+   }
+  ],
+  "out_of_scope": [
+   "How do I apply for a driving licence?",
+   "What is the Wi-Fi speed in the library?",
+   "Is smoking allowed in the hostel?",
+   "How much is the tuition fee for the whole programme?",
+   "Which companies visit for campus placements?",
+   "How do I change my hostel roommate?",
+   "What is the pass mark for each course?",
+   "Can I take a part-time job during the programme?",
+   "Is there a swimming coach on campus?",
+   "What are the timings of the cafeteria?",
+   "How do I get a letter of recommendation?",
+   "What is the policy on student loans?"
+  ]
+ }
+}

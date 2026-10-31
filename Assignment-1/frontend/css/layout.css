@@ -1,0 +1,69 @@
+/* Page structure. Wide screens: chat and inspector side by side, each scrolling on its own.
+   Narrow screens: one panel at a time, switched by the Chat / Insights control. */
+
+.app-header {
+  /* thin four-colour accent line on top, then the white header surface */
+  background:
+    linear-gradient(90deg, var(--g-blue) 0 25%, var(--g-red) 25% 50%, var(--g-yellow) 50% 75%, var(--g-green) 75% 100%) top / 100% 4px no-repeat,
+    var(--surface);
+  border-bottom: 1px solid var(--border);
+  padding: 16px clamp(14px, 3vw, 28px) 12px;
+  display: flex; flex-wrap: wrap; align-items: flex-start; justify-content: space-between; gap: 12px 24px;
+}
+.brand { display: flex; align-items: center; gap: 12px; }
+/* Logo: a four-colour ring (blue, red, yellow, green) around a white disc holding a blue "C". CSS only. */
+.brand-mark {
+  position: relative; isolation: isolate;
+  width: 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; flex: none;
+  background: conic-gradient(from -45deg, var(--g-blue) 0 25%, var(--g-red) 0 50%, var(--g-yellow) 0 75%, var(--g-green) 0 100%);
+  color: var(--primary); font-weight: 700; font-size: 1.15rem;
+}
+.brand-mark::before { content: ""; position: absolute; inset: 5px; border-radius: 50%; background: var(--surface); z-index: -1; }
+.brand-title { font-size: 1.2rem; line-height: 1.2; font-weight: 600; letter-spacing: -0.01em; }
+.brand-sub { color: var(--muted); font-size: 0.85rem; }
+
+.identity { display: grid; grid-template-columns: auto auto auto; align-items: end; gap: 8px 12px; }
+.identity .help, .identity .field-error { grid-column: 1 / -1; }
+.status-stack { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+
+.view-switch { display: none; }
+
+.workspace {
+  padding: clamp(10px, 2vw, 20px) clamp(14px, 3vw, 28px) 24px;
+  display: grid; gap: 16px; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  outline: none;
+}
+.panel {
+  background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius);
+  box-shadow: var(--shadow); display: flex; flex-direction: column; min-width: 0;
+}
+.panel-head { padding: 16px 18px 10px; display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 16px; }
+.panel-head h2 { font-size: 1.05rem; }
+.panel-sub { color: var(--muted); font-size: 0.85rem; flex-basis: 100%; }
+
+/* Desktop: fixed-height workspace so panels scroll internally */
+@media (min-width: 1024px) {
+  body { height: 100dvh; display: flex; flex-direction: column; overflow: hidden; }
+  .workspace { flex: 1; min-height: 0; }
+  .panel { min-height: 0; overflow: hidden; }
+  .chat-log, .tab-panel { overflow-y: auto; }
+}
+
+/* Tablet and phone */
+@media (max-width: 1023.98px) {
+  .workspace { grid-template-columns: minmax(0, 1fr); }
+  .view-switch {
+    display: flex; gap: 4px; margin: 12px clamp(14px, 3vw, 28px) 0; padding: 4px;
+    background: var(--surface); border: 1px solid var(--border); border-radius: 999px; width: fit-content;
+  }
+  body[data-view="chat"] #inspector { display: none; }
+  body[data-view="insights"] #chat-panel { display: none; }
+  .chat-log { height: min(62dvh, 640px); min-height: 300px; overflow-y: auto; }
+  .tab-panel { min-height: 40dvh; }
+}
+@media (max-width: 640px) {
+  .app-header { padding: 10px 14px; }
+  .identity { grid-template-columns: 1fr auto; }
+  .status-stack { grid-column: 1 / -1; }
+  .brand-sub { display: none; }
+}

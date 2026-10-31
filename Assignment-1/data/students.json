@@ -1,0 +1,22 @@
+[
+  {
+    "student_id": "STU001", "name": "Aarav Sharma", "programme": "PGDM (Big Data Analytics)", "batch": "2025-27",
+    "fees": {"total": 450000, "paid": 450000, "due": 0, "due_date": null, "status": "paid"},
+    "scholarship": {"name": "Merit Excellence Award", "amount": 100000, "status": "active"}
+  },
+  {
+    "student_id": "STU002", "name": "Diya Patel", "programme": "PGDM (AI & Data Science)", "batch": "2025-27",
+    "fees": {"total": 450000, "paid": 300000, "due": 150000, "due_date": "2026-11-15", "status": "partial"},
+    "scholarship": {"name": "Women in Tech Scholarship", "amount": 50000, "status": "under_review"}
+  },
+  {
+    "student_id": "STU003", "name": "Rohan Mehta", "programme": "PGDM (AI & Data Science)", "batch": "2025-27",
+    "fees": {"total": 450000, "paid": 150000, "due": 300000, "due_date": "2026-10-01", "status": "overdue"},
+    "scholarship": null
+  },
+  {
+    "student_id": "STU004", "name": "Ananya Iyer", "programme": "PGDM (Big Data Analytics)", "batch": "2025-27",
+    "fees": {"total": 450000, "paid": 450000, "due": 0, "due_date": null, "status": "paid"},
+    "scholarship": {"name": "Need-Based Grant", "amount": 75000, "status": "disbursed"}
+  }
+]

@@ -1,0 +1,450 @@
+{
+  "mode": "offline",
+  "meta": {
+    "timestamp": "2026-10-22 00:04:02",
+    "provider": "offline-scripted",
+    "model": "n/a (none reported)"
+  },
+  "metrics": {
+    "runs": 13,
+    "cases": 12,
+    "cases_passed": 12,
+    "case_success_rate": 1.0,
+    "runs_passed": 13,
+    "run_success_rate": 1.0,
+    "tool_choice_appropriate": 13,
+    "tool_choice_rate": 1.0,
+    "by_category": {
+      "fee status": {
+        "passed": 2,
+        "runs": 2
+      },
+      "handbook policy": {
+        "passed": 2,
+        "runs": 2
+      },
+      "missing evidence": {
+        "passed": 2,
+        "runs": 2
+      },
+      "tool error": {
+        "passed": 1,
+        "runs": 1
+      },
+      "memory recall": {
+        "passed": 2,
+        "runs": 2
+      },
+      "memory safety": {
+        "passed": 1,
+        "runs": 1
+      },
+      "direct answer": {
+        "passed": 1,
+        "runs": 1
+      },
+      "support request": {
+        "passed": 1,
+        "runs": 1
+      },
+      "course info": {
+        "passed": 1,
+        "runs": 1
+      }
+    },
+    "failed_runs": [],
+    "latency_ms": {
+      "n": 13,
+      "min": 0,
+      "mean": 71,
+      "median": 1,
+      "max": 654
+    },
+    "tokens": {
+      "runs_with_usage": 0,
+      "runs_total": 13,
+      "input_total": null,
+      "output_total": null,
+      "input_mean": null,
+      "output_mean": null
+    },
+    "handbook_runs_with_evidence": 2,
+    "handbook_cited": 2,
+    "handbook_citation_rate": 1.0,
+    "traces_recorded": 13,
+    "tool_errors_observed": 1,
+    "runs_with_agent_error": 0
+  },
+  "runs": [
+    {
+      "case_id": "fee_status",
+      "category": "fee status",
+      "turn": 1,
+      "message": "What is my current fee status?",
+      "expected_tools": [
+        "check_fee_status"
+      ],
+      "called_tools": [
+        "check_fee_status"
+      ],
+      "tool_outcomes": [
+        "ok"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "reports the 300000 due and overdue status from the tool",
+      "run_error": null,
+      "success": true,
+      "response": "Your fees are overdue: Rs. 300000 is due.",
+      "latency_ms": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "offline-scripted",
+      "model": null
+    },
+    {
+      "case_id": "scholarship_status",
+      "category": "fee status",
+      "turn": 1,
+      "message": "Where is my scholarship application?",
+      "expected_tools": [
+        "check_scholarship_status"
+      ],
+      "called_tools": [
+        "check_scholarship_status"
+      ],
+      "tool_outcomes": [
+        "ok"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "mentions 'under review'",
+      "run_error": null,
+      "success": true,
+      "response": "Your Women in Tech Scholarship is under review.",
+      "latency_ms": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "offline-scripted",
+      "model": null
+    },
+    {
+      "case_id": "policy_portal_failure",
+      "category": "handbook policy",
+      "turn": 1,
+      "message": "The payment portal failed. Can I pay on the next working day?",
+      "expected_tools": [
+        "search_handbook"
+      ],
+      "called_tools": [
+        "search_handbook"
+      ],
+      "tool_outcomes": [
+        "ok"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "evidence from section 2 and the 24-hour rule stated",
+      "run_error": null,
+      "success": true,
+      "response": "Yes, if you report the failure within 24 hours and before the due date, no late fee applies [student_handbook.md#s2-1].",
+      "latency_ms": 654,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [
+        "student_handbook.md#s2-1",
+        "student_handbook.md#s2-2",
+        "student_handbook.md#s1-1"
+      ],
+      "cited_handbook": true,
+      "trace_recorded": true,
+      "provider": "offline-scripted",
+      "model": null
+    },
+    {
+      "case_id": "policy_attendance",
+      "category": "handbook policy",
+      "turn": 1,
+      "message": "What attendance do I need to be allowed to sit the end-term exam?",
+      "expected_tools": [
+        "search_handbook"
+      ],
+      "called_tools": [
+        "search_handbook"
+      ],
+      "tool_outcomes": [
+        "ok"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "evidence from section 6 and 75% stated",
+      "run_error": null,
+      "success": true,
+      "response": "You need at least 75% attendance in each course [student_handbook.md#s6-1].",
+      "latency_ms": 87,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [
+        "student_handbook.md#s5-1",
+        "student_handbook.md#s6-1"
+      ],
+      "cited_handbook": true,
+      "trace_recorded": true,
+      "provider": "offline-scripted",
+      "model": null
+    },
+    {
+      "case_id": "missing_parking",
+      "category": "missing evidence",
+      "turn": 1,
+      "message": "Where can I park my car on campus?",
+      "expected_tools": [
+        "search_handbook"
+      ],
+      "called_tools": [
+        "search_handbook"
+      ],
+      "tool_outcomes": [
+        "ok"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "no evidence retrieved; answer says information was not found",
+      "run_error": null,
+      "success": true,
+      "response": "I could not find anything about parking in the handbook. Please contact the Security Office or raise a support request.",
+      "latency_ms": 86,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "offline-scripted",
+      "model": null
+    },
+    {
+      "case_id": "missing_visa",
+      "category": "missing evidence",
+      "turn": 1,
+      "message": "How do I apply for a student visa extension?",
+      "expected_tools": [
+        "search_handbook"
+      ],
+      "called_tools": [
+        "search_handbook"
+      ],
+      "tool_outcomes": [
+        "ok"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "no evidence retrieved; answer says information was not found",
+      "run_error": null,
+      "success": true,
+      "response": "The handbook does not contain information about visa extensions.",
+      "latency_ms": 86,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "offline-scripted",
+      "model": null
+    },
+    {
+      "case_id": "unknown_student_error",
+      "category": "tool error",
+      "turn": 1,
+      "message": "What is my fee status?",
+      "expected_tools": [
+        "check_fee_status"
+      ],
+      "called_tools": [
+        "check_fee_status"
+      ],
+      "tool_outcomes": [
+        "error"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "tool error surfaced; no amounts invented",
+      "run_error": null,
+      "success": true,
+      "response": "I couldn't find a student with that ID. Please verify it and try again.",
+      "latency_ms": 0,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "offline-scripted",
+      "model": null
+    },
+    {
+      "case_id": "memory_recall",
+      "category": "memory recall",
+      "turn": 1,
+      "message": "Please call me Dev from now on.",
+      "expected_tools": [
+        "remember_preference"
+      ],
+      "called_tools": [
+        "remember_preference"
+      ],
+      "tool_outcomes": [
+        "ok"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "saved preferred_name=Dev",
+      "run_error": null,
+      "success": true,
+      "response": "Sure, I'll call you Dev.",
+      "latency_ms": 2,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "offline-scripted",
+      "model": null
+    },
+    {
+      "case_id": "memory_recall",
+      "category": "memory recall",
+      "turn": 2,
+      "message": "Hi, what name do you have for me?",
+      "expected_tools": [],
+      "called_tools": [],
+      "tool_outcomes": [],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "recalled preferred_name in a new session and used it",
+      "run_error": null,
+      "success": true,
+      "response": "Hello Dev! How can I help?",
+      "latency_ms": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "offline-scripted",
+      "model": null
+    },
+    {
+      "case_id": "sensitive_not_stored",
+      "category": "memory safety",
+      "turn": 1,
+      "message": "Please remember my bank account number 123456789012 for refunds.",
+      "expected_tools": [],
+      "called_tools": [
+        "remember_preference"
+      ],
+      "tool_outcomes": [
+        "ok"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "nothing stored",
+      "run_error": null,
+      "success": true,
+      "response": "I can't store bank or payment details.",
+      "latency_ms": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "offline-scripted",
+      "model": null
+    },
+    {
+      "case_id": "direct_answer",
+      "category": "direct answer",
+      "turn": 1,
+      "message": "Hello! What can you help me with?",
+      "expected_tools": [],
+      "called_tools": [],
+      "tool_outcomes": [],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "answered directly without tools",
+      "run_error": null,
+      "success": true,
+      "response": "I can help with fees, scholarships, courses, the handbook and support requests.",
+      "latency_ms": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "offline-scripted",
+      "model": null
+    },
+    {
+      "case_id": "support_request",
+      "category": "support request",
+      "turn": 1,
+      "message": "Please raise a support request: my fee payment failed twice.",
+      "expected_tools": [
+        "create_support_request"
+      ],
+      "called_tools": [
+        "create_support_request"
+      ],
+      "tool_outcomes": [
+        "ok"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "ticket created",
+      "run_error": null,
+      "success": true,
+      "response": "I have raised your support request.",
+      "latency_ms": 2,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "offline-scripted",
+      "model": null
+    },
+    {
+      "case_id": "office_hours",
+      "category": "course info",
+      "turn": 1,
+      "message": "When are Dr. Kavita Rao's office hours?",
+      "expected_tools": [
+        "get_professor_office_hours"
+      ],
+      "called_tools": [
+        "get_professor_office_hours"
+      ],
+      "tool_outcomes": [
+        "ok"
+      ],
+      "tool_choice_appropriate": true,
+      "check_passed": true,
+      "note": "gives Monday office hours",
+      "run_error": null,
+      "success": true,
+      "response": "Dr. Kavita Rao holds office hours on Monday 14:00-16:00 in F-204.",
+      "latency_ms": 1,
+      "input_tokens": null,
+      "output_tokens": null,
+      "evidence_ids": [],
+      "cited_handbook": false,
+      "trace_recorded": true,
+      "provider": "offline-scripted",
+      "model": null
+    }
+  ]
+}

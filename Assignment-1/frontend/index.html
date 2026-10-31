@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CampusPilot AI — Student Support Agent</title>
+  <meta name="description" content="Chat dashboard for the CampusPilot AI student support agent (fictional demo data).">
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="app-header">
+    <div class="brand">
+      <span class="brand-mark" aria-hidden="true">C</span>
+      <div>
+        <h1 class="brand-title">CampusPilot AI</h1>
+        <p class="brand-sub">Student support agent · fictional demo data</p>
+      </div>
+    </div>
+
+    <form id="identity-form" class="identity" novalidate>
+      <div class="field">
+        <label for="student-id">Student ID</label>
+        <input id="student-id" name="student-id" type="text" value="STU001" maxlength="20"
+               autocomplete="off" spellcheck="false" aria-describedby="student-help student-error" required>
+      </div>
+      <button type="button" id="new-session" class="btn btn-secondary">New session</button>
+      <div class="status-stack">
+        <span id="api-status" class="chip chip-neutral" role="status" aria-live="polite">Checking API…</span>
+        <span id="session-chip" class="chip chip-neutral" title="Conversation session id">No session yet</span>
+      </div>
+      <p id="student-help" class="help">Fictional demo IDs are listed in <code>data/students.json</code> (STU001–STU004).</p>
+      <p id="student-error" class="field-error" role="alert" hidden></p>
+    </form>
+  </header>
+
+  <div class="view-switch" role="group" aria-label="Choose view">
+    <button type="button" class="view-btn" id="view-chat" aria-pressed="true">Chat</button>
+    <button type="button" class="view-btn" id="view-insights" aria-pressed="false">Insights</button>
+  </div>
+
+  <main id="main" class="workspace" tabindex="-1">
+    <!-- Chat -->
+    <section id="chat-panel" class="panel chat-panel" aria-labelledby="chat-title">
+      <div class="panel-head">
+        <h2 id="chat-title">Conversation</h2>
+        <p class="panel-sub">The agent decides whether to answer directly, call a tool, search the handbook or use remembered preferences.</p>
+      </div>
+
+      <div id="chat-log" class="chat-log" role="log" aria-live="polite" aria-relevant="additions" aria-label="Conversation messages" tabindex="0">
+        <div id="chat-empty" class="empty-state">
+          <h3>Ask a question to get started</h3>
+          <p>Try one of these, or type your own:</p>
+          <ul id="suggestions" class="suggestions"></ul>
+        </div>
+      </div>
+
+      <div id="typing" class="typing" role="status" hidden>
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span>CampusPilot is working on it…</span>
+      </div>
+
+      <form id="composer" class="composer" novalidate>
+        <label for="message" class="sr-only">Your message</label>
+        <textarea id="message" rows="2" maxlength="2000" placeholder="Ask about fees, scholarships, courses, policies…"
+                  aria-describedby="composer-hint composer-error"></textarea>
+        <button type="submit" id="send" class="btn btn-primary">
+          <span class="btn-label">Send</span>
+        </button>
+        <p id="composer-hint" class="help">Enter to send · Shift+Enter for a new line · <span id="char-count">0</span>/2000</p>
+        <p id="composer-error" class="field-error" role="alert" hidden></p>
+      </form>
+    </section>
+
+    <!-- Inspector -->
+    <section id="inspector" class="panel inspector" aria-labelledby="inspector-title">
+      <div class="panel-head">
+        <h2 id="inspector-title">Inspector</h2>
+        <div class="turn-picker">
+          <label for="turn-select">Inspect turn</label>
+          <select id="turn-select" disabled>
+            <option value="">No turns yet</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="tabs" role="tablist" aria-label="Inspector sections">
+        <button role="tab" id="tab-evidence" aria-controls="panel-evidence" aria-selected="true" tabindex="0">Evidence</button>
+        <button role="tab" id="tab-activity" aria-controls="panel-activity" aria-selected="false" tabindex="-1">Agent activity</button>
+        <button role="tab" id="tab-memory" aria-controls="panel-memory" aria-selected="false" tabindex="-1">Memory</button>
+        <button role="tab" id="tab-evaluation" aria-controls="panel-evaluation" aria-selected="false" tabindex="-1">Evaluation</button>
+      </div>
+
+      <div id="panel-evidence" class="tab-panel" role="tabpanel" aria-labelledby="tab-evidence" tabindex="0"></div>
+      <div id="panel-activity" class="tab-panel" role="tabpanel" aria-labelledby="tab-activity" tabindex="0" hidden></div>
+      <div id="panel-memory" class="tab-panel" role="tabpanel" aria-labelledby="tab-memory" tabindex="0" hidden></div>
+      <div id="panel-evaluation" class="tab-panel" role="tabpanel" aria-labelledby="tab-evaluation" tabindex="0" hidden></div>
+    </section>
+  </main>
+
+  <div id="announcer" class="sr-only" role="status" aria-live="polite"></div>
+
+  <noscript><p class="noscript">This dashboard needs JavaScript. The API is still available at <code>/docs</code>.</p></noscript>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
