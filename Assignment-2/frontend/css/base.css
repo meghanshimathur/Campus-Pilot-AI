@@ -1,0 +1,64 @@
+/* Design tokens, reset and shared utilities. Light theme only (Google-inspired palette). System fonts, no external requests. */
+:root {
+  /* Google-inspired palette. The four brand colours are used for decoration (logo, accents, dots) because
+     #4285F4/#EA4335/#34A853/#FBBC05 do not reach 4.5:1 as text on white. Text and controls use the darker
+     shades below, all >= 4.5:1 on their backgrounds. */
+  --g-blue: #4285f4;  --g-red: #ea4335;  --g-yellow: #fbbc05;  --g-green: #34a853;
+
+  --bg: #f8f9fa;
+  --surface: #ffffff;
+  --surface-2: #f1f3f4;
+  --border: #dadce0;
+  --border-strong: #bdc1c6;
+  --text: #202124;
+  --muted: #5f6368;          /* 6.0:1 on white */
+  --primary: #1967d2;        /* 5.4:1 against white text */
+  --primary-hover: #174ea6;
+  --primary-soft: #e8f0fe;
+  --primary-border: #d2e3fc;
+  --accent-line: #aecbfa;
+  --success: #137333;  --success-soft: #e6f4ea;
+  --warning: #7a4d00;  --warning-soft: #fef7e0;
+  --danger: #c5221f;   --danger-soft: #fce8e6;
+  --info: #1967d2;     --info-soft: #e8f0fe;
+  --focus: #1a73e8;
+  --radius: 16px;
+  --radius-sm: 10px;
+  --shadow: 0 1px 2px rgba(60, 64, 67, 0.12), 0 1px 3px 1px rgba(60, 64, 67, 0.08);
+  --font: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --mono: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  --header-h: 0px; /* set in layout.css when the header is sticky */
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--text);
+  font: 15px/1.5 var(--font);
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, h4, p, ul, ol, dl, dd, blockquote, figure { margin: 0; }
+ul, ol { padding: 0; list-style: none; }
+button, input, select, textarea { font: inherit; color: inherit; }
+code { font-family: var(--mono); font-size: 0.88em; background: var(--surface-2); border: 1px solid var(--border); border-radius: 6px; padding: 0.05em 0.35em; }
+q { quotes: "“" "”"; }
+[hidden] { display: none !important; }
+
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+
+.sr-only {
+  position: absolute !important; width: 1px; height: 1px; margin: -1px; padding: 0;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+.skip-link {
+  position: absolute; left: 12px; top: -48px; z-index: 100;
+  background: var(--primary); color: #fff; padding: 10px 16px; border-radius: 0 0 8px 8px; text-decoration: none; font-weight: 600;
+}
+.skip-link:focus { top: 0; }
+.muted { color: var(--muted); }
+.small { font-size: 0.85rem; }
+.noscript { padding: 16px; background: var(--warning-soft); color: var(--warning); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; scroll-behavior: auto !important; }
+}
